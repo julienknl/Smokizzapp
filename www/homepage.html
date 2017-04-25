@@ -1,0 +1,29 @@
+    <ion-content>
+      <div  class="heartimgcontainer">
+        <img src="../www/img/smokizimg/iconmain.png" class="heartimg">
+        <h5 class="count" style="padding-top:20px;">Days gain</h5>
+        <h2 class="count"> {{life}} </h2>
+      </div>
+
+      <h4 class="minuteGain"> Minutes gain: {{minuteGain}}/30</h4> <!-- Change to 30 minutes for testing purpose -->
+
+      <h2>{{days}} Days without smoking</h2>
+
+      <h4 class="minuteGain">{{clock | date:'HH:mm:ss' }}</h4>
+
+      <!--Smoke button container-->
+      <div class="smokebtncontainermain">
+          <div class="smokebtncontainer">
+            <button  class="smokeBtn button" type="submit" style="border: 0; background:transparent;"   ng-disabled="isDisabled" ng-click="onClickSmokeBtn();">
+              <img class="smokeimg" src="../www/img/smokizimg/smokeicon.png">
+            </button>
+            <p>Smoke</p>
+          </div>
+          <div class="smokebtncontainer">
+            <button  class="smokeBtn button" type="submit" style="border: 0; background:transparent;"  ng-disabled="isDisabled" ng-click="onClickRejectedSmokeBtn();">
+              <img class="smokeimg" src="../www/img/smokizimg/nosmokeicon.png">
+            </button>
+            <p>Rejected smoke</p>
+          </div>
+      </div>
+  </ion-content>

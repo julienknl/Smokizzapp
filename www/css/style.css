@@ -1,0 +1,92 @@
+/* Empty. Add your own CSS if you like */
+.spentcigarette{
+    margin-top:50%;
+    margin-bottom:50%;
+    text-align:center;
+}
+
+.donebtn{
+    padding:20px;
+    padding-top:30px;
+}
+
+.statimg{
+    width: 30%;
+    height: auto;
+}
+
+.list{
+    margin-top: 50px;
+}
+
+/* Homepage */
+.heartimgcontainer {
+    margin: auto;
+    text-align:center;
+    position:relative;
+}
+.count {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:10px;
+    color:#fff;
+    height:100px;
+}
+
+.heartimg{
+    width:50%;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 50px;
+}
+
+h2{
+    color: #258e25;
+    text-align: center;
+    padding-top: 30px;
+}
+
+h2.count{
+    color: white;
+    font-size:50px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.smokebtncontainermain {
+    margin-top: 90px;
+    width: 100%;
+    text-align: center;
+}
+.smokebtncontainer {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.smokeimg {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; 
+}
+
+.nosmokeimg {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.minuteGain{
+    text-align: center;
+    color:#39ac39;
+}
+
+
+

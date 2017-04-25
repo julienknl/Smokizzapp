@@ -1,0 +1,38 @@
+    <ion-content>
+        <!-- List of stats-->
+      <div class="list">
+        <a class="item item-icon-left" href="#">
+          <i class="icon"><img class="statimg" src="../www/img/smokizimg/moneysaveicon.png"></i> Money saved
+          <span class="item-note">
+            ${{addMoney}}
+          </span>
+        </a>
+
+        <a class="item item-icon-left" href="#">
+          <i class="icon"><img class="statimg" src="../www/img/smokizimg/grainicon.png"></i> Life gain
+          <span class="item-note">
+            {{life}}
+          </span>
+        </a>
+
+        <a class="item item-icon-left" href="#">
+          <i class="icon"><img class="statimg" src="../www/img/smokizimg/nosmokecigaretteicon.png" ></i> Cigarette not smoked
+          <span class="item-note">
+            {{cigarette}}
+          </span>
+        </a>
+
+        <div class="list">
+          <a class="item" href="#" style="color:#ff3333">
+            Money spent per packet of cigarette
+            <span class="item-note">
+            {{moneySpent}}
+            </span>
+          </a>
+        </div>
+      </div>
+      <!--<div id="noteInformation" style="bottom:5px; position:relative;">
+        <h5 id="content" style="color: #002333; position: fixed; bottom: 20px; width:100%; text-align: center">Please note: Most of the calculated statistics are calculated approximately.</h5>
+      </div>-->
+    </ion-content>
+

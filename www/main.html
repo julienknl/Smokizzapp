@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+  <!--cordova emulate ios -target="iPhone-6-Plus"-->
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+  <script src="js/tabbar.js"></script>
+</head>
+
+<body ng-app="smokizzApp" ng-controller="smokizzController">
+
+  <ion-pane>
+    <ion-content>
+
+    </ion-content>
+
+    <!-- Tab bar menu -->
+    <ion-tabs class=" tabs-icon-top">
+      <ion-tab title="Progress" icon-on="ion-happy" icon-off="ion-happy-outline">
+          <!--Progress page content-->
+          <ion-view>
+            <div ng-include src="'homepage.html'"></div>
+          </ion-view>
+      </ion-tab>
+      <ion-tab title="Stats" icon-on="ion-ios-list" icon-off="ion-ios-list-outline">
+        <!--Stat page content-->
+        <ion-view>
+          <div ng-include src="'statpage.html'"></div>
+        </ion-view>
+      </ion-tab>
+    </ion-tabs>
+    
+  </ion-pane>
+
+</body>
+
+</html>
