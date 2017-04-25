@@ -29,7 +29,7 @@ smokApp.controller('smokizzController', function($scope, $state, $interval, $tim
   $scope.moneySpent = window.localStorage.getItem("moneySpent");
   $scope.addMoney = window.localStorage.getItem("addMoney") == undefined ? 0 : parseInt(window.localStorage.getItem("addMoney"));;
   $scope.clock = Date.now();
-  $scope.days = window.localStorage.getItem("days") == undefined ? 0 : parseInt(window.localStorage.getItem("days"));
+  $scope.days = window.localStorage.getItem("days") == null ? 0 : parseInt(window.localStorage.getItem("days"));
   $scope.isDisabled = false;
   const fullDay = 0;
 
@@ -181,13 +181,16 @@ $scope.$on('cordovaResumeEvent', function(){
 });
 
 $scope.calculateNoSmokingDays = function() {
- var savedTime = parseInt(window.localStorage.getItem("savedTime"));
-  var currentTime = Date.now();
-  $scope.days += parseInt((currentTime - savedTime) / (86400000));
-  //For testing purposes: Once app closed, then reopened after 1 minute, this will add to the days
-  // $scope.days += parseInt((currentTime - savedTime) / (60000));
-  days = window.localStorage.getItem("days");
-  window.localStorage.setItem("days", days + $scope.days);
+ var savedTime = window.localStorage.getItem("savedTime");
+ if(savedTime !== null) {
+    savedTime = parseInt(savedTime);
+    var currentTime = Date.now();
+    $scope.days += parseInt((currentTime - savedTime) / (86400000));
+    //For testing purposes: Once app closed, then reopened after 1 minute, this will add to the days
+    //$scope.days += parseInt((currentTime - savedTime) / (60000));
+    days = window.localStorage.getItem("days");
+    window.localStorage.setItem("days", days + $scope.days);
+ }
 };
 
 });
